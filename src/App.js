@@ -47,6 +47,23 @@ const Btn = styled.button`
 const Link = styled.a`
   color: white;
 `;
+const Input = styled.input.attrs((props) => ({
+  type: 'text',
+  placeholder: 'Enter your name',
+  size: props.size || '1em',
+  required: true,
+  minlenght: 10,
+}))`
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+`;
 function App() {
   return (
     <Father as='header'>
@@ -57,6 +74,7 @@ function App() {
         </Btn>
         <Box bgColor='red'>Box 1</Box>
         <Circle bgColor='blue'>Circle 1</Circle>
+        <Input type='text' placeholder='Enter your name' />
       </BoxWrapper>
     </Father>
   );
