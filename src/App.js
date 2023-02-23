@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Father = styled.div`
   display: flex;
@@ -8,6 +8,25 @@ const Father = styled.div`
   height: 100vh;
   background-color: #282c34;
   color: white;
+`;
+const animation = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
+const rotationAnimation = keyframes`
+from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(360deg);
+  }
 `;
 const BoxWrapper = styled.div`
   display: flex;
