@@ -37,12 +37,24 @@ const Text = styled.p`
   font-size: 20px;
   font-weight: bold;
 `;
-
+const Btn = styled.button`
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+`;
+const Link = styled.a`
+  color: white;
+`;
 function App() {
   return (
-    <Father>
+    <Father as='header'>
       <Text>Styled Components</Text>
       <BoxWrapper>
+        <Btn as='a' href='/'>
+          Login
+        </Btn>
         <Box bgColor='red'>Box 1</Box>
         <Circle bgColor='blue'>Circle 1</Circle>
       </BoxWrapper>
