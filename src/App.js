@@ -12,7 +12,7 @@ const Father = styled.div`
 const BoxWrapper = styled.div`
   display: flex;
 `;
-const BoxOne = styled.div`
+const Box = styled.div`
   width: 100px;
   height: 100px;
   background-color: #282c34;
@@ -25,27 +25,14 @@ const BoxOne = styled.div`
   margin: 10px;
   cursor: pointer;
   &:hover {
-    background-color: #61dafb;
+    background-color: ${(props) => props.bgColor};
     color: #282c34;
   }
 `;
-const BoxTwo = styled.div`
-  width: 100px;
-  height: 100px;
-  background-color: #282c34;
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  cursor: pointer;
-  &:hover {
-    background-color: #61dafb;
-    color: #282c34;
-  }
+const Circle = styled(Box)`
+  border-radius: 50%;
 `;
+
 const Text = styled.p`
   font-size: 20px;
   font-weight: bold;
@@ -56,8 +43,8 @@ function App() {
     <Father>
       <Text>Styled Components</Text>
       <BoxWrapper>
-        <BoxOne>Box 1</BoxOne>
-        <BoxTwo>Box 2</BoxTwo>
+        <Box bgColor='red'>Box 1</Box>
+        <Circle bgColor='blue'>Circle 1</Circle>
       </BoxWrapper>
     </Father>
   );
