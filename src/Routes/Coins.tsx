@@ -84,33 +84,32 @@ function Coins() {
   //   })();
   // }, []);
   return (
-    <div>e</div>
-    // <Container>
-    //   <Header>
-    //     <Title>코인</Title>
-    //   </Header>
-    //   {isLoading ? (
-    //     <Loader>Loading...</Loader>
-    //   ) : (
-    //     // <CoinsList>
-    //     //   {data?.slice(0, 3).map((coin) => (
-    //     //     <Coin key={coin.market_cap}>
-    //     //       <Link
-    //     //         to={{
-    //     //           pathname: `/${coin.market_cap}`,
-    //     //           state: { name: coin.open },
-    //     //         }}
-    //     //       >
-    //     //         <Img
-    //     //           src={`https://ohlcv-api.nomadcoders.workers.dev/?coinId=btc-bitcoin`}
-    //     //         />
-    //     //         {coin.open} &rarr;
-    //     //       </Link>
-    //     //     </Coin>
-    //     //   ))}
-    //     // </CoinsList>
-    //   // )}
-    // </Container>
+    <Container>
+      <Header>
+        <Title>코인</Title>
+      </Header>
+      {isLoading ? (
+        <Loader>Loading...</Loader>
+      ) : (
+        <CoinsList>
+          {/* {data?.slice(0, 3).map((coin) => ( */}
+          {/* <Coin key={coin.market_cap}> */}
+          {/* <Link
+                to={{
+                  pathname: `/${coin.market_cap}`,
+                  state: { name: coin.open },
+                }} */}
+          {/* > */}
+          <Img
+            src={`https://ohlcv-api.nomadcoders.workers.dev/?coinId=btc-bitcoin`}
+          />
+          {/* {coin.open} &rarr; */}
+          {/* </Link> */}
+          {/* </Coin> */}
+          {/* // ))} */}
+        </CoinsList>
+      )}
+    </Container>
   );
 }
 export default Coins;

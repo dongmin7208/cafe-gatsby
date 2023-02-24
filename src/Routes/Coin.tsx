@@ -165,7 +165,7 @@ function Coin() {
   }, [coinId]);
   return (
     <Container>
-      {/* <Header>
+      <Header>
         <Title>
           {state?.name ? state.name : loading ? 'Loading...' : info?.name}
         </Title>
@@ -218,7 +218,7 @@ function Coin() {
             </Route>
           </Switch>
         </>
-      )} */}
+      )}
     </Container>
   );
 }
