@@ -92,21 +92,21 @@ function Coins() {
         <Loader>Loading...</Loader>
       ) : (
         <CoinsList>
-          {/* {data?.slice(0, 3).map((coin) => ( */}
-          {/* <Coin key={coin.market_cap}> */}
-          {/* <Link
+          {data?.map((coin) => (
+            <Coin key={coin.market_cap}>
+              <Link
                 to={{
                   pathname: `/${coin.market_cap}`,
                   state: { name: coin.open },
-                }} */}
-          {/* > */}
-          <Img
+                }}
+              >
+                {/* <Img
             src={`https://ohlcv-api.nomadcoders.workers.dev/?coinId=btc-bitcoin`}
-          />
-          {/* {coin.open} &rarr; */}
-          {/* </Link> */}
-          {/* </Coin> */}
-          {/* // ))} */}
+          /> */}
+                {coin.open} &rarr;
+              </Link>
+            </Coin>
+          ))}
         </CoinsList>
       )}
     </Container>

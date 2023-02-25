@@ -4,7 +4,6 @@ import Coins from './Coins';
 const Price = () => {
   return (
     <div>
-      <Coins />
       <Coin />
     </div>
   );

@@ -4,7 +4,6 @@ import Coins from './Coins';
 const Chart = () => {
   return (
     <div>
-      <Coins />
       <Coin />
     </div>
   );
