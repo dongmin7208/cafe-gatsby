@@ -64,15 +64,17 @@ interface ICoin {
   type: string;
 }
 
+interface ICoinsProps {}
+
 function Coins() {
   const { isLoading, data } = useQuery<ICoin[]>('allCoins', fetchCoins);
   return (
     <Container>
       <Helmet>
-        <title>Coin</title>
+        <title>코인</title>
       </Helmet>
       <Header>
-        <Title>Coin Cafe</Title>
+        <Title>코인</Title>
       </Header>
       {isLoading ? (
         <Loader>Loading...</Loader>
