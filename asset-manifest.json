@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/cafe-gatsby/static/js/main.613a108e.chunk.js",
+    "main.js.map": "/cafe-gatsby/static/js/main.613a108e.chunk.js.map",
+    "runtime-main.js": "/cafe-gatsby/static/js/runtime-main.92759f95.js",
+    "runtime-main.js.map": "/cafe-gatsby/static/js/runtime-main.92759f95.js.map",
+    "static/js/2.ae84ac91.chunk.js": "/cafe-gatsby/static/js/2.ae84ac91.chunk.js",
+    "static/js/2.ae84ac91.chunk.js.map": "/cafe-gatsby/static/js/2.ae84ac91.chunk.js.map",
+    "index.html": "/cafe-gatsby/index.html",
+    "static/js/2.ae84ac91.chunk.js.LICENSE.txt": "/cafe-gatsby/static/js/2.ae84ac91.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.92759f95.js",
+    "static/js/2.ae84ac91.chunk.js",
+    "static/js/main.613a108e.chunk.js"
+  ]
+}
