@@ -20,10 +20,11 @@ const Header = styled.header`
 const CoinsList = styled.ul``;
 
 const Coin = styled.li`
-  background-color: white;
-  color: ${(props) => props.theme.bgColor};
+  background-color: ${(props) => props.theme.cardBgColor};
+  color: ${(props) => props.theme.textColor};
   border-radius: 15px;
   margin-bottom: 10px;
+  border: 1px solid white;
   a {
     display: flex;
     align-items: center;
@@ -68,10 +69,10 @@ function Coins() {
   return (
     <Container>
       <Helmet>
-        <title>coin</title>
+        <title>Coin</title>
       </Helmet>
       <Header>
-        <Title>coin</Title>
+        <Title>Coin Cafe</Title>
       </Header>
       {isLoading ? (
         <Loader>Loading...</Loader>
