@@ -1,8 +1,8 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 function Header() {
-  const navigate = useNavigate();
+  const history = useHistory();
   const onAboutClick = () => {
-    navigate('/about');
+    history.push('/about');
   };
   return (
     <header>

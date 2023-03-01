@@ -2,10 +2,10 @@ import { useParams } from 'react-router-dom';
 import { users } from '../../db';
 
 function User() {
-  const { userId } = useParams();
+  // const { userId } = useParams();
   return (
     <h1>
-      User with id {userId} is named: {users[Number(userId) - 1].name}
+      {/* User with id {userId} is named: {users[Number(userId) - 1].name} */}
     </h1>
   );
 }

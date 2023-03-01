@@ -1,8 +1,9 @@
-// import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { fetchCoins } from '../api';
-import { useQuery } from 'react-query';
+
 const Container = styled.div`
   padding: 0px 20px;
   max-width: 480px;
@@ -53,57 +54,41 @@ const Img = styled.img`
 `;
 
 interface ICoin {
-  // id: string;
-  // name: string;
-  // symbol: string;
-  // rank: number;
-  // is_new: boolean;
-  // is_active: boolean;
-  // type: string;
-  time_open: number;
-  time_close: number;
-  open: string;
-  high: string;
-  low: string;
-  close: string;
-  volume: string;
-  market_cap: number;
+  id: string;
+  name: string;
+  symbol: string;
+  rank: number;
+  is_new: boolean;
+  is_active: boolean;
+  type: string;
 }
 
 function Coins() {
   const { isLoading, data } = useQuery<ICoin[]>('allCoins', fetchCoins);
-
-  // const [coins, setCoins] = useState<CoinInterface[]>([]);
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   (async () => {
-  //     const response = await fetch('https://api.coinpaprika.com/v1/coins');
-  //     const json = await response.json();
-  //     setCoins(json.slice(0, 100));
-  //     setLoading(false);
-  //   })();
-  // }, []);
   return (
     <Container>
+      <Helmet>
+        <title>coin</title>
+      </Helmet>
       <Header>
-        <Title>코인</Title>
+        <Title>coin</Title>
       </Header>
       {isLoading ? (
         <Loader>Loading...</Loader>
       ) : (
         <CoinsList>
-          {data?.map((coin) => (
-            <Coin key={coin.market_cap}>
+          {data?.slice(0, 100).map((coin) => (
+            <Coin key={coin.id}>
               <Link
                 to={{
-                  pathname: `/${coin.market_cap}`,
-                  state: { name: coin.open },
+                  pathname: `/${coin.id}`,
+                  state: { name: coin.name },
                 }}
               >
-                {/* <Img
-            src={`https://ohlcv-api.nomadcoders.workers.dev/?coinId=btc-bitcoin`}
-          /> */}
-                {coin.open} &rarr;
+                <Img
+                  src={`https://cryptoicon-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
+                />
+                {coin.name} &rarr;
               </Link>
             </Coin>
           ))}
