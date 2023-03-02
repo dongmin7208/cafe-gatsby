@@ -12,10 +12,10 @@ import styled from 'styled-components';
 import { fetchCoinInfo, fetchCoinTickers } from '../api';
 import Chart from './Chart';
 import Price from './Price';
+import { DefaultTheme } from 'styled-components';
 
 const Title = styled.h1`
   font-size: 48px;
-  color: ${(props) => props.theme.accentColor};
 `;
 
 const Loader = styled.span`
@@ -73,8 +73,6 @@ const Tab = styled.span<{ isActive: boolean }>`
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  color: ${(props) =>
-    props.isActive ? props.theme.accentColor : props.theme.textColor};
   a {
     padding: 7px 0px;
     display: block;
