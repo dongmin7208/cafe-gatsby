@@ -8,7 +8,6 @@ import { useSetRecoilState } from 'recoil';
 const Wrapper = styled.div`
   width: 300px;
   padding-top: 10px;
-  background-color: ${(props) => props.theme.boardColor};
   border-radius: 5px;
   min-height: 300px;
   display: flex;

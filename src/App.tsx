@@ -1,34 +1,25 @@
-import styled from 'styled-components';
-import Todo from './components/Todo';
-// import Motion from './components/Motion';
-// import Motion from './components/Motion';
-import Motion from './components/Motion';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Board from './components/Board';
-import DragabbleCard from './components/DragabbleCard';
-import Coin from './routes/Coin';
-import Coins from './routes/Coins';
-import Chart from './routes/Chart';
-import Ani from './components/AnimatePresence';
-import Airbnb from './components/Airbnb';
-import Slider from './components/Slider';
+import Home from './routes/Home';
+import Search from './routes/Search';
+import Tv from './routes/Tv';
+
 function App() {
   return (
-    <>
-      <Airbnb />
-      <Motion />
-      <Todo />
-      <Ani />
-      <Slider />
-      {/* <Chart coinId={} /> */}
-      {/* <Coin /> */}
-      {/* <Coins /> */}
-      {/* <Header /> */}
-      {/* <DragabbleCard toDoId={0} toDoText={''} index={0} />
-      <Board toDos={[]} boardId={''} /> */}
-
-      {/* <Board toDos={[]} boardId={''} /> */}
-    </>
+    <Router>
+      <Header />
+      <Switch>
+        <Route path='/tv'>
+          <Tv />
+        </Route>
+        <Route path='/search'>
+          <Search />
+        </Route>
+        <Route path={['/', '/movies/:movieId']}>
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
