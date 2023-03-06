@@ -10,8 +10,8 @@ import {
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { fetchCoinInfo, fetchCoinTickers } from '../api';
-import Chart from './Chart';
-import Price from './Price';
+import Chart from '../Routes/Chart';
+import Price from '../Routes/Price';
 import { DefaultTheme } from 'styled-components';
 
 const Title = styled.h1`

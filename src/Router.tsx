@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Coin from './routes/Coin';
-import Coins from './routes/Coins';
+import Coin from './Routes/Coin';
+import Coins from './Routes/Coins';
 
 interface IRouterProps {}
 
