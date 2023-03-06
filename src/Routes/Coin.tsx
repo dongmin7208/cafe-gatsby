@@ -141,6 +141,7 @@ interface PriceData {
 
 interface ICoinProps {}
 
+// eslint-disable-next-line no-empty-pattern
 function Coin({}: ICoinProps) {
   const { coinId } = useParams<RouteParams>();
   const { state } = useLocation<RouteState>();
